@@ -1,0 +1,149 @@
+﻿/*Definimos una clase para <ul> */
+ul.columnas{
+	Float: left;
+	width: 100%; /*Este ancho será el total que ocupen muestras columnas */
+	List-style-type: none; /*Eliminamos las viñetas */
+}
+
+/*Definimos las propiedades para <li> a partir de las otorgadas a <ul>*/
+ul.columnas li{
+	Display:inline; /*Se declara que las propiedades serán otorgadas a cada linea*/
+	Float: left;
+	Width:30%;
+} /*Al definir el ancho definimos también el número de columnas, siendo 25% para 4 columnas, 33% para 3, 50% para 2 y asi para la cantidad de columnas que deseemos */
+
+/*Override css del UI del Selectable*/
+.FriendSelectable .ui-selecting
+{
+	background-color:#ecf7e4;
+	color:#696969;
+}
+.FriendSelectable .ui-selected
+{
+	background-image:url('ok_white.png');
+	background-repeat:no-repeat;
+	background-position:right top;
+	background-color:#d8dfea;
+	color:#696969;
+}
+.FriendSelectable
+{
+	background-color:White;
+	color:#696969; 
+	font-size:11px; 
+	font-family:Tahoma, Arial, sans-serif; 
+	font-weight:normal;
+}
+.FriendSelectable li:hover
+{
+	background-image:url('ok.png');
+	background-repeat:no-repeat;
+	background-position:right top;
+	background-color:#eceff5;
+	color:#696969;
+}
+.FriendSelectable li div
+{
+	word-wrap: break-word;
+	height:50px;	
+}
+.FriendSelectable li  
+{
+	margin: 3px; 
+	border:1px solid  #DADADA;
+}
+/*Botones Todos,Seleccionados,No seleccionados*/
+.tabs_selectables
+{
+    font-size:13px; 
+    font-family:Tahoma, Arial, sans-serif; 
+    color:#8aa3cb; 
+    font-weight:bold; 
+    border: 1px solid #d8dfea;
+    padding: 2px 0;
+    text-align: center; 
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: #D8DFEA 1px 1px 1px;
+    -moz-box-shadow: #D8DFEA 1px 1px 1px;
+    box-shadow: #D8DFEA 1px 1px 1px;
+    background: #D8DFEA;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#D8DFEA), to(#eceff5));
+    background: -webkit-linear-gradient(#D8DFEA, #eceff5);
+    background: -moz-linear-gradient(#D8DFEA, #eceff5);
+    background: -ms-linear-gradient(#D8DFEA, #eceff5);
+    background: -o-linear-gradient(#D8DFEA, #eceff5);
+    background: linear-gradient(#D8DFEA, #eceff5);
+    -pie-background: linear-gradient(#D8DFEA, #eceff5);
+    behavior: url(PIE.htc);
+}
+.tabs_selectables:hover{
+    font-size:13px; 
+    font-family:Tahoma, Arial, sans-serif; 
+    color:#8aa3cb; 
+    font-weight:bold;             
+    border: 1px solid #d8dfea;
+    padding: 2px 0;
+    text-align: center; 
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: #D8DFEA 1px 1px 1px;
+    -moz-box-shadow: #D8DFEA 1px 1px 1px;
+    box-shadow: #D8DFEA 1px 1px 1px;
+    background: #D8DFEA;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eceff5), to(#D8DFEA));
+    background: -webkit-linear-gradient(#eceff5, #D8DFEA);
+    background: -moz-linear-gradient(#eceff5, #D8DFEA);
+    background: -ms-linear-gradient(#eceff5, #D8DFEA);
+    background: -o-linear-gradient(#eceff5, #D8DFEA);
+    background: linear-gradient(#eceff5, #D8DFEA);
+    -pie-background: linear-gradient(#eceff5, #D8DFEA);
+    behavior: url(PIE.htc);
+}
+/*Filtro Textbox*/
+.filterFS{
+    float:left; 
+    vertical-align:top; 
+    position:relative; 
+    left:50px; 
+    top:0; 
+    width:400px;
+}
+.viewallFS{
+    float:left; 
+    vertical-align:top; 
+    position:relative; 
+    left:50px;
+}
+.selectedsFS{
+    float:left; 
+    vertical-align:top; 
+    position:relative; 
+    left:60px;
+}
+.unselectedsFS{
+    float:left; 
+    vertical-align:top; 
+    position:relative; 
+    left:70px;
+}
+/*Marca Agua en filtros*/
+.WaterMark  
+{
+    font-family:Tahoma, Arial, sans-serif; 
+    font-weight:normal;
+    color: #8aa3cb; 
+    background-color:#D8DFEA; 
+    font-style: italic; 
+    font-weight:bold; 
+}
+.WaterMarkOff  
+{
+    font-family:Tahoma, Arial, sans-serif; 
+    font-weight:normal; 
+    color: #696969; 
+    background-color:#ecf7e4; 
+    font-style:normal;
+}

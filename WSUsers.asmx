@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="WSUsers.asmx.cs" Class="FriendSelecto.WSUsers" %>
+﻿<%@ WebService Language="C#" CodeBehind="WSUsers.asmx.cs" Class="FriendSelector.WSUsers" %>

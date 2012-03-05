@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='jquery.FriendSelector.css' />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script type='text/javascript' src='http://code.jquery.com/ui/1.8.18/jquery-ui.min.js'></script>
+<script type='text/javascript' src='jquery.FriendSelector.js'></script>
+
+	<script type="text/javascript">
+      /*function keys(o) {
+          var ret = []
+          for (var key in o) {
+              var val = o[key]
+              if (o.hasOwnProperty(key)) // exclude attributes in the parent
+                  ret.push(key);
+          }
+          return ret;
+      }
+      function GetUsersFromServer() {
+          $.ajax({
+              async: false,
+              type: "POST",
+              data: "{}",
+              url: "WSUsers.asmx/getUsers",
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success: function (response) {
+                  try {
+                      var result = Sys.Serialization.JavaScriptSerializer.deserialize(response.d, true);
+                      var k = keys(result);
+                      var i = 0;
+                      for (i = 0; i < (result[k[0]]).length; i++) {
+                          var id = ((result[k[0]])[i]).id;
+                          var title = ((result[k[0]])[i]).name;
+                      }
+                      arr_users = result[k[0]];
+                  }
+                  catch (Error) {
+                      alert("Error ajax " + Error.get_Message());
+                  }
+              },
+              error: function (XMLHttpRequest, textStatus, errorThrown) {
+				alert("ResponseText: " + XMLHttpRequest.responseText + "\ntextStatus:" + textStatus + "\nerrorThrown:" + errorThrown);
+              }
+          });
+      }*/
+
+      function GetUsersFromClient() {
+          for (var i = 0; i < 10; i++) {
+              arr_users.push(
+                    {
+                        "id": i, "name": "User number " + i
+                    }
+                ); 
+          }
+      }
+      var arr_users = new Array();
+
+      $(document).ready(function () {
+          //GetUsersFromServer();
+          GetUsersFromClient();
+          $("#div_container").FriendSelector({
+              /*name_viewall: 'Todos',
+              name_viewselecteds: 'Seleccionados',
+              name_viewunselecteds: 'No Seleccionados',
+              text_filter: 'Filtrar nombre...',*/
+              _create: arr_users
+          });
+      });
+	</script>
+</head>
+<body>
+	Aqui aparece el Friend selector
+	<div id="div_container"></div>
+</body>
+</html>
